@@ -5,20 +5,19 @@ import { useEffect, useState } from "react";
 
 
 const ProductPage = () => {
-    const [products,setProducts] = useState("Product");
+    const [products,setProducts] = useState([]);
     useEffect(() => {
-        fetch('api/data/hello').then((res) => res.json()).then((data) => 
+        fetch('api/db/database').then((res) => res.json()).then((data) => 
         {
-        setProducts(data.data)
-            
+        setProducts(data.data)    
         })
     },[])
+    
     return (
         <div>
             <h1>
                 Product Page  
-                
-                    {products}
+                {setProducts}
 
             </h1>
             

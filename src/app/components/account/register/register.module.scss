@@ -3,43 +3,71 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-top: 100px;
-    
-    &__title{
+    background-image: url(./img/syfoto.jpg);
+    color: white;
+    background-size: cover;
+    padding: 15vh 1vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+
+
+
+    &__title {
+
         font-size: 32px;
     }
-    &__form{
-        width: 50%;
+
+    &__form {
+        backdrop-filter: blur(4px);
+        margin-top: 20px;
+        border-radius: 12px;
+        width: 30%;
         padding: 20px;
         box-shadow: 0 0 3px rgba($color: #000000, $alpha: 0.5);
         margin-bottom: 20px;
+
         &__item {
+            margin: 10px;
             display: flex;
             flex-direction: column;
-            
-            &__input{
+
+            &__input {
                 padding: 10px;
                 background-color: #eee;
             }
-            &__button{    
-                background-color: #000000;
-                color: white;
-                width: 25%;
-                padding: 10px;
-                border-radius: 10px;
 
+            &__button {
+                align-items: center;
+                
+                align-items: center;
+                text-align: center;
+                margin-top: 20px;
+
+
+                &__buttonItems {
+                    background-color: #000000;
+                    color: white;
+                    width:  25%;
+                    padding: 10px;
+                    border-radius: 10px;
+                    margin: 10px;
+                    
+
+
+                }
             }
+
 
         }
 
-    }&__link{
+    }
+
+    &__link {
         a {
-            color: darkblue;
+            color: white;
             font-weight: bold;
-            
+
         }
     }
 }
-
-
-

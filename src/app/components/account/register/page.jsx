@@ -1,6 +1,10 @@
 import Link from "next/link"
 import styles from "./register.module.scss"
 
+
+export const metadata = {
+    title : "Register",
+}
 const RegisterView = () => {
     return (
         <>
@@ -15,7 +19,7 @@ const RegisterView = () => {
                             <input type="email"
                                 id="email"
                                 name="email"
-                                placeholder="email"
+                                placeholder="Email"
                                 className={styles.register__form__item__input} />
                         </div>
                         <div className={styles.register__form__item}>
@@ -25,7 +29,7 @@ const RegisterView = () => {
                             <input type="text"
                                 id="fullname"
                                 name="fullname"
-                                placeholder="fullname"
+                                placeholder="Fullname"
                                 className={styles.register__form__item__input} />
                         </div>
                         <div className={styles.register__form__item}>
@@ -38,13 +42,18 @@ const RegisterView = () => {
                                 placeholder="Password"
                                 className={styles.register__form__item__input} />
                         </div>
-                        <button type="submit" className={styles.register__form__item__button}>Register</button>
+                        <div className={styles.register__form__item__button}>
+                            <button type="submit" className={styles.register__form__item__button__buttonItems}>Register</button>
+                            <button type="submit" className={styles.register__form__item__button__buttonItems}>Facebook</button>
+                            <button type="submit" className={styles.register__form__item__button__buttonItems}>Google</button>
+                        </div>
 
 
                     </form>
                 </div>
+
                 <p className={styles.register__link}>
-                    Have an Account? Sign In <Link href="/auth/login"> Here </Link>
+                    Have an Account? Sign In <Link href="/components/account/login"> Here </Link>
                 </p>
             </div>
         </>
