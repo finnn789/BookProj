@@ -1,6 +1,5 @@
-const { Sequelize, DataTypes } = require('sequelize');
-const sequelize = new Sequelize('sqlite::memory:');
-
+import { Sequelize, DataTypes } from 'sequelize';
+const sequelize = require('../config/database')['development'];
 
 const User = sequelize.define('User', {
  username: {
@@ -16,9 +15,7 @@ const User = sequelize.define('User', {
     type: DataTypes.STRING,
     allowNull: false,
  },
-},{
-   tableName: 'Employees'
- });
+});
 
-module.exports = User
+export default User
 

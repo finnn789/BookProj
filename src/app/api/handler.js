@@ -1,4 +1,4 @@
-const User = require('./db/Database.js');
+const User = require('../../../config/database')['development'];
 export default async function getUsers(req, res) {
  if (req.method === 'GET') {
     try {
