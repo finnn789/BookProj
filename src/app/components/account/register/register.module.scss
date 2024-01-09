@@ -1,0 +1,45 @@
+.register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+    
+    &__title{
+        font-size: 32px;
+    }
+    &__form{
+        width: 50%;
+        padding: 20px;
+        box-shadow: 0 0 3px rgba($color: #000000, $alpha: 0.5);
+        margin-bottom: 20px;
+        &__item {
+            display: flex;
+            flex-direction: column;
+            
+            &__input{
+                padding: 10px;
+                background-color: #eee;
+            }
+            &__button{    
+                background-color: #000000;
+                color: white;
+                width: 25%;
+                padding: 10px;
+                border-radius: 10px;
+
+            }
+
+        }
+
+    }&__link{
+        a {
+            color: darkblue;
+            font-weight: bold;
+            
+        }
+    }
+}
+
+
+
