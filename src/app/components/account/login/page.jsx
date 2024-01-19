@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image"
 import Link from "next/link"
-import pernikahan from "../image/syfoto.jpg"
+import pernikahan from "../image/flower.jpg"
 import style from "./style.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faEyeSlash } from '@fortawesome/free-solid-svg-icons'
@@ -32,7 +32,7 @@ const login = () => {
                         <form action="" method="post">
                             <h1 className={style.loginLogo}>Login</h1>
                             <div className={style.inputbox}>
-                                <FontAwesomeIcon icon={faEnvelope} className="w-[1.6rem] absolute right-5 bottom-5 text-white" />
+                                <FontAwesomeIcon icon={faEnvelope} className="w-[1.6rem] absolute right-5 bottom-5 text-black" />
                                 <input type="email" name="email" id="" />
                                 <label htmlFor="email">Email</label>
 
@@ -40,7 +40,7 @@ const login = () => {
                             <div className={style.inputbox}>
                                 <input type={inputType} name="password" id="" />
                                 <button type='button' onClick={toggleVisibility}>
-                                    <FontAwesomeIcon icon={passwordVisible ? faEyeSlash : faEye} className="w-[1.6rem] absolute right-5 bottom-5 text-white  cursor-pointer" />
+                                    <FontAwesomeIcon icon={passwordVisible ? faEyeSlash : faEye} className="w-[1.6rem] absolute right-5 bottom-5 text-black  cursor-pointer" />
                                 </button>
 
                                 <label htmlFor="">Password</label>

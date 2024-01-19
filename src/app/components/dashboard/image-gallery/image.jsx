@@ -1,18 +1,36 @@
-import Image from "next/image"
-import Pernikahan from "../img/pernikahan.jpg"
+// CardGrid.js
+import React, { useEffect } from 'react';
+import Card from './Card';
+import Script from 'next/script';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
 
-const ImageGallery = () => {
+
+
+const data = [
+    { title: 'Eva & Raffi', description: 'Description 1', imageUrl: 'https://placekitten.com/300/200' },
+    { title: 'Card 2', description: 'Description 2', imageUrl: 'https://placekitten.com/300/201' },
+    { title: 'Card 3', description: 'Description 3', imageUrl: 'https://placekitten.com/300/202' },
+    { title: 'Card 4', description: 'Description 4', imageUrl: 'https://placekitten.com/300/203' },
+    // Add more data as needed
+];
+const CardGrid = ({ data }) => {
+
+
+
     return (
-        <div className="max-h-[100vh] flex justify-center items-center">
-            <div className="image-gallery w-[80%] m-[5em] grid grid-cols-[auto-fit_minmax(250px,_1fr)_100px] gap-[30px] auto-rows-[minmax(300px,_2fr)]">
-                <Image className=" block max-w-[100%] object-cover rounded-[8px]" src={Pernikahan} width={100} height={100} />
-                <Image className=" block max-w-[100%] object-cover rounded-[8px]" src={Pernikahan} width={100} height={100} />
-                <Image className=" block max-w-[100%] object-cover rounded-[8px]" src={Pernikahan} width={100} height={100} />
-
+        <>
+            <div data-aos="fade-down"
+                data-aos-easing="linear"
+                data-aos-duration="1500" className=" my-20 mx-20 grid grid-cols-2 gap-10  sm:grid-cols-4 sm:grid:">
+                {data && data.map((item, index,) => (
+                    <Card key={index} {...item} />
+                ))}
             </div>
-        </div>
-    )
+            <Script src='https://unpkg.com/aos@2.3.1/dist/aos.js'></Script>
+        </>
+    );
+};
 
-
-}
-export default ImageGallery
+export default CardGrid;
